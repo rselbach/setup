@@ -18,6 +18,7 @@ brew cask install iterm2
 brew cask install rambox
 brew cask install slack
 brew cask install vmware-fusion
+brew cask install google-cloud-sdk
 
 # restore my vim settings
 git clone --recursive git@github.com:rselbach/.vim.git ~/.vim
