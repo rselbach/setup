@@ -10,13 +10,14 @@ brew install vim
 brew install go
 brew install wget
 
+brew cask install 1password
 brew cask install google-chrome
 brew cask install visual-studio-code
 brew cask install spotify
-brew cask install 1password
 brew cask install iterm2
 brew cask install rambox
 brew cask install slack
+brew cask install vmware-fusion
 
 # restore my vim settings
 git clone --recursive git@github.com:rselbach/.vim.git ~/.vim
