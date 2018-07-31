@@ -47,3 +47,12 @@ sudo apt-get update && aptinstall -y code
 . ./vscode.sh
 
 cat bashrc >> $HOME/.bashrc
+
+sed -e 's,\xc4\x86,\xc3\x87,g' \
+    -e 's,\xc4\x87,\xc3\xa7,g' \
+    < /usr/share/X11/locale/en_US.UTF-8/Compose > $HOME/.XCompose
+
+cat >> /etc/environment <<EOF
+GTK_IM_MODULES=cedilla
+QT_IM_MODULES=cedilla
+EOF
