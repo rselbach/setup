@@ -5,6 +5,7 @@ if [[ ! -f "/usr/local/bin/brew" ]]; then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+brew install zsh
 brew install git
 brew install vim
 brew install go
@@ -35,6 +36,7 @@ git config --global user.email "r@rst.sh"
 brew cask install visual-studio-code
 . ./vscode.sh
 
+# config zsh
+cp -f zshrc $HOME/.zshrc
 
-# add stuff to bash_profile
-cat bashrc >> $HOME/.bash_profile
+git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
