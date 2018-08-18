@@ -127,8 +127,7 @@ export PATH=$HOME/go/bin:$PATH
 DEFAULT_USER="rselbach"
 
 if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-  PROMPT='${ret_status} %{$fg[green]%}[%{$fg[red]%}$USER@%m%{$fg[green]%}] %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+  PROMPT='${ret_status} 🤓 [%{$fg[red]%}$USER@%m] %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 else
-  PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+  PROMPT='${ret_status} 🤓 %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 fi
-
