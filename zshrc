@@ -123,7 +123,7 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history
 
 
 
-export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/devel/go/bin:$HOME/go/bin:$PATH
 DEFAULT_USER="rselbach"
 
 if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
