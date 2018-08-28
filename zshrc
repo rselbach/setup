@@ -126,6 +126,8 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history
 export PATH=$HOME/devel/go/bin:$HOME/go/bin:$PATH
 DEFAULT_USER="rselbach"
 
+
+
 # see if we have a custom prompt icon
 if [[ -f $HOME/.prompt ]]; then
   prompt_info="$(source $HOME/.prompt)"
@@ -136,7 +138,7 @@ fi
 local status_color="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
 local ret_status="%{$status_color%}➜ "
 if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-  PROMPT='${ret_status} ${prompt_info} [%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+  PROMPT='${ret_status} ${prompt_info} [%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg[cyan]➤ ${reset_color}'
 else
-  PROMPT='${ret_status} ${prompt_info} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+  PROMPT='${ret_status} ${prompt_info} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg[cyan]➤ ${reset_color}'
 fi
