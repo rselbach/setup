@@ -18,7 +18,7 @@ sudo apt-get update
 aptistall spotify-client
 
 # restore my vim settings
-git clone --recursive git@github.com:rselbach/.vim.git ~/.vim
+git clone --recursive git@github.com:robteix/.vim.git ~/.vim
 
 git config --global user.name "Roberto Selbach"
 git config --global user.email "r@rst.sh"

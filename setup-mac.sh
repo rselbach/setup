@@ -23,7 +23,7 @@ brew cask install google-cloud-sdk
 brew cask install docker
 
 # restore my vim settings
-git clone --recursive git@github.com:rselbach/.vim.git ~/.vim
+git clone --recursive git@github.com:robteix/.vim.git ~/.vim
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 
 # setup git

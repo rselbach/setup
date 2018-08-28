@@ -124,7 +124,7 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history
 
 
 export PATH=$HOME/devel/go/bin:$HOME/go/bin:$PATH
-DEFAULT_USER="rselbach"
+DEFAULT_USER="robteix"
 
 
 
