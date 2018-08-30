@@ -18,7 +18,7 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -64,9 +64,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   colorize
-  git
-  git-prompt
-  osx
   ssh-agent
 )
 
@@ -138,7 +135,7 @@ fi
 local status_color="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
 local ret_status="%{$status_color%}➜ "
 if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-  PROMPT='${ret_status} ${prompt_info} [%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg[cyan]➤ ${reset_color}'
+  PROMPT='${ret_status} ${prompt_info} [%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg_bold[cyan]➤ ${reset_color}'
 else
-  PROMPT='${ret_status} ${prompt_info} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg[cyan]➤ ${reset_color}'
+  PROMPT='${ret_status} ${prompt_info} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg_bold[cyan]➤ ${reset_color}'
 fi
