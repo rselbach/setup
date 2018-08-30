@@ -7,8 +7,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -135,7 +135,7 @@ fi
 local status_color="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
 local ret_status="%{$status_color%}➜ "
 if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-  aPROMPT='${ret_status} ${prompt_info} [%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg_bold[cyan]➤ ${reset_color}'
+  PROMPT='${ret_status} ${prompt_info} [%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg_bold[cyan]➤ ${reset_color}'
 else
-  aPROMPT='${ret_status} ${prompt_info} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg_bold[cyan]➤ ${reset_color}'
+  PROMPT='${ret_status} ${prompt_info} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg_bold[cyan]➤ ${reset_color}'
 fi
