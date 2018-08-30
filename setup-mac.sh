@@ -16,7 +16,6 @@ brew cask install 1password
 brew cask install google-chrome
 brew cask install spotify
 brew cask install iterm2
-brew cask install rambox
 brew cask install slack
 brew cask install vmware-fusion
 brew cask install google-cloud-sdk
