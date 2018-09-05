@@ -133,7 +133,7 @@ golang_version() {
 
   local go_version=$(go version | awk '{print substr($3, 3)}' )
 
-  echo " [go${go_version}] "
+  echo "[go${go_version}] "
 }
 
 local_prompt() {
@@ -143,7 +143,7 @@ local_prompt() {
   else
     local prompt_info="🤓"
   fi
-  echo " ${prompt_info} "
+  echo "${prompt_info} "
 }
 
 local status_color="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
