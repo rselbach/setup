@@ -8,7 +8,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-#ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -116,7 +115,7 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history
-
+#setopt EXTENDED_GLOB             # Extended globs
 
 
 
@@ -124,18 +123,33 @@ export PATH=$HOME/devel/go/bin:$HOME/go/bin:$PATH
 DEFAULT_USER="robteix"
 
 
+golang_version() {
+  setopt localoptions extendedglob
 
-# see if we have a custom prompt icon
-if [[ -f $HOME/.prompt ]]; then
-  prompt_info="$(source $HOME/.prompt)"
-else
-  prompt_info="🤓"
-fi
+  # If there are Go-specific files in current directory, or current directory is under the GOPATH
+  [[ -d Godeps || -f glide.yaml || -n *.go(#qN^/) || -f Gopkg.yml || -f Gopkg.lock || ( $GOPATH && $PWD =~ $GOPATH ) ]] || return
+
+  [ $(command -v go) ] || return
+
+  local go_version=$(go version | awk '{print substr($3, 3)}' )
+
+  echo " [go${go_version}] "
+}
+
+local_prompt() {
+  # see if we have a custom prompt icon
+  if [[ -f $HOME/.prompt ]]; then
+    local prompt_info="$(source $HOME/.prompt)"
+  else
+    local prompt_info="🤓"
+  fi
+  echo " ${prompt_info} "
+}
 
 local status_color="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
 local ret_status="%{$status_color%}➜ "
 if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-  PROMPT='${ret_status} ${prompt_info} [%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg_bold[cyan]➤ ${reset_color}'
+    PROMPT='${ret_status}$(golang_version)$(local_prompt)[%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
 else
-  PROMPT='${ret_status} ${prompt_info} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)$fg_bold[cyan]➤ ${reset_color}'
+    PROMPT='${ret_status}$(golang_version)$(local_prompt)%{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
 fi
