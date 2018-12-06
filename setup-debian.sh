@@ -50,6 +50,9 @@ sudo apt-get update && aptinstall -y code
 cp -f zshrc $HOME/.zshrc
 git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 
+# ctags with go support
+ln -snf ctags $HOME/.ctags
+
 # fix keyboard
 sed -e 's,\xc4\x86,\xc3\x87,g' \
     -e 's,\xc4\x87,\xc3\xa7,g' \

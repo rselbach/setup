@@ -149,7 +149,11 @@ local_prompt() {
 local status_color="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
 local ret_status="%{$status_color%}➜ "
 if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    PROMPT='${ret_status}$(golang_version)$(local_prompt)[%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
+    PROMPT='${ret_status}$(local_prompt)[%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
 else
-    PROMPT='${ret_status}$(golang_version)$(local_prompt)%{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
+    PROMPT='${ret_status}$(local_prompt)%{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
 fi
+
+export PATH=$PATH:"/Applications/VMware Fusion.app/Contents/Library"
+
+setopt no_share_history
