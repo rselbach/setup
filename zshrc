@@ -157,3 +157,5 @@ fi
 export PATH=$PATH:"/Applications/VMware Fusion.app/Contents/Library"
 
 setopt no_share_history
+
+export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/gcloud/application_default_credentials.json
