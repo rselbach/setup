@@ -34,7 +34,8 @@ brew cask install visual-studio-code
 . ./vscode.sh
 
 
-# ctags with go support
+# exuberant ctags with go support
+brew install ctags
 ln -snf ctags $HOME/.ctags
 
 # install other tools
