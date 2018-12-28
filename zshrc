@@ -159,3 +159,13 @@ export PATH=$PATH:"/Applications/VMware Fusion.app/Contents/Library"
 setopt no_share_history
 
 export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/gcloud/application_default_credentials.json
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# setup jump
+eval "$(jump shell zsh)"
+

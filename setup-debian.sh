@@ -46,6 +46,14 @@ sudo apt-get update && aptinstall -y code
 
 . ./vscode.sh
 
+
+# can't live without jump
+JUMPVER=0.22.0
+wget https://github.com/gsamokovarov/jump/releases/download/v${JUMPVER}/jump_${JUMPVER}_amd64.deb
+sudo dpkg -i jump_${JUMPVER}_amd64.deb
+
+
+
 # config zsh
 cp -f zshrc $HOME/.zshrc
 git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh

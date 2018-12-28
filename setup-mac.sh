@@ -51,5 +51,6 @@ brew cask install slack
 brew cask install vmware-fusion
 brew cask install google-cloud-sdk
 brew cask install docker
+brew install jump
 
 
