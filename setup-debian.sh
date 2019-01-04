@@ -47,6 +47,9 @@ sudo apt-get update && aptinstall -y code
 . ./vscode.sh
 
 
+# direnv
+sudo apt-get install direnv
+
 # can't live without jump
 JUMPVER=0.22.0
 wget https://github.com/gsamokovarov/jump/releases/download/v${JUMPVER}/jump_${JUMPVER}_amd64.deb
