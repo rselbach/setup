@@ -23,7 +23,6 @@ git config --global user.email "r@rst.sh"
 
 
 brew install vim
-. ./vim.sh
 git clone --recursive git@github.com:robteix/.vim.git ~/.vim
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 
