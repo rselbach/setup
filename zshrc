@@ -9,6 +9,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -149,9 +151,9 @@ local_prompt() {
 local status_color="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
 local ret_status="%{$status_color%}➜ "
 if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    PROMPT='${ret_status}$(local_prompt)[%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
+    xPROMPT='${ret_status}$(local_prompt)[%{$fg[red]%}$USER@%m%{$status_color%}] %{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
 else
-    PROMPT='${ret_status}$(local_prompt)%{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
+    xPROMPT='${ret_status}$(local_prompt)%{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
 fi
 
 export PATH=$PATH:"/Applications/VMware Fusion.app/Contents/Library"
@@ -168,4 +170,3 @@ eval "$(direnv hook zsh)"
 
 # setup jump
 eval "$(jump shell zsh)"
-
