@@ -5,15 +5,6 @@ if [[ ! -f "/usr/local/bin/brew" ]]; then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-#########################
-# install and config zsh
-#########################
-brew install zsh
-ln -sf zshrc $HOME/.zshrc
-
-git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
-
-
 #############
 # set up git
 #############
@@ -53,3 +44,13 @@ brew cask install docker
 brew install jump
 brew install direnv
 
+
+
+# various setups
+#for i in setup.d/*-mac; do
+#	source "$i"
+#done
+
+for i in setup.d/*-all; do
+	source "$i"
+done

@@ -73,3 +73,9 @@ cat >> /etc/environment <<EOF
 GTK_IM_MODULES=cedilla
 QT_IM_MODULES=cedilla
 EOF
+
+
+# various configs
+for i in setup.d/*-all; do
+	source "$i"
+done
