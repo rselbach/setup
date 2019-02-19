@@ -11,6 +11,17 @@ ZSH_THEME="robbyrussell"
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+dir_background='208'
+dir_foreground='black'
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND=${dir_foreground}
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND=${dir_background}
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND=${dir_background}
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND=${dir_foreground}
+POWERLEVEL9K_DIR_HOME_FOREGROUND=${dir_foreground}
+POWERLEVEL9K_DIR_HOME_BACKGROUND=${dir_background}
+POWERLEVEL9K_DIR_ETC_FOREGROUND=${dir_foreground}
+POWERLEVEL9K_DIR_ETC_BACKGROUND=${dir_background}
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
