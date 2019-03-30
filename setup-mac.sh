@@ -44,7 +44,8 @@ brew cask install docker
 brew install jump
 brew install direnv
 
-
+# go language server
+go get -u github.com/saibing/bingo
 
 # various setups
 #for i in setup.d/*-mac; do
