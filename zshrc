@@ -168,3 +168,8 @@ eval "$(direnv hook zsh)"
 
 # setup jump
 eval "$(jump shell zsh)"
+
+
+# machine-specific configs
+[ -f "${HOME}/.zsh.local" ] && source "${HOME}/.zsh.local"
+
