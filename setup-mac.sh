@@ -47,11 +47,14 @@ brew install direnv
 # go language server
 go get -u github.com/saibing/bingo
 
-# various setups
-#for i in setup.d/*-mac; do
-#	source "$i"
-#done
+do_source() {
+    local fn="$1"
+    [ -f "${fn}" ] || return
+    [[ $fn == *-mac || $fn == *-all ]] && source ${fn}
+}
 
-for i in setup.d/*-all; do
-	source "$i"
+# various configs
+for i in setup.d/*; do
+    do_source "$i"
 done
+
