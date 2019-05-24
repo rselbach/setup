@@ -1,0 +1,3 @@
+# restore my vim settings
+git clone --recursive git@github.com:robteix/.vim.git ~/.vim
+ln -sf $HOME/.vim/vimrc $HOME/.vimrc
