@@ -1,9 +1,7 @@
-
 #########################
-# install and config zsh
+# config zsh
 #########################
-brew install zsh
-ln -sf zshrc $HOME/.zshrc
+ln -sf $(pwd)/zshrc $HOME/.zshrc
 
 git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 git clone https://github.com/powerline/fonts.git "$HOME/.powerline"

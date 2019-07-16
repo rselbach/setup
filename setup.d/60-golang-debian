@@ -1,0 +1,2 @@
+VERSION="1.12.5"
+curl "https://dl.google.com/go/go${VERSION}.linux-amd64.tar.gz" | sudo tar -C /usr/local -zxf -
