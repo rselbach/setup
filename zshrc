@@ -64,6 +64,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
   colorize
   ssh-agent
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
