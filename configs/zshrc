@@ -127,7 +127,7 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history
 
 
 
-export PATH=$HOME/devel/go/bin:$HOME/go/bin:$PATH
+export PATH=$HOME/devel/go/bin:$HOME/go/bin:/usr/local/go/bin:$PATH
 DEFAULT_USER="robteix"
 
 
@@ -173,7 +173,6 @@ export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/gcloud/application_default_c
 
 # setup jump
 eval "$(jump shell zsh)"
-
 
 # machine-specific configs
 [ -f "${HOME}/.zsh.local" ] && source "${HOME}/.zsh.local"
