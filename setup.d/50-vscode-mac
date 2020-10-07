@@ -1,5 +1,0 @@
-
-############################
-# install and set up vscode
-############################
-brew cask install visual-studio-code
