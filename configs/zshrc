@@ -72,7 +72,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 
-source $HOME/devel/kube-ps1/kube-ps1.sh
+source $HOME/.kube-ps1/kube-ps1.sh
 
 KUBE_PS1_NS_ENABLE=false
 
@@ -170,9 +170,6 @@ export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/gcloud/application_default_c
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-# direnv
-eval "$(direnv hook zsh)"
 
 # setup jump
 eval "$(jump shell zsh)"
