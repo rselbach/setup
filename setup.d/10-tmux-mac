@@ -1,2 +1,1 @@
 brew install tmux
-ln -snf ${SETUP_DIR}/configs/tmux.conf $HOME/.tmux.conf
