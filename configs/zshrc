@@ -189,4 +189,5 @@ export NVM_DIR="$HOME/.nvm"
 alias tx='tmux attach || tmux new'
 
 alias vim='nvim'
+alias v='nvim'
 export EDITOR=nvim
