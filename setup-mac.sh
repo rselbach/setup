@@ -41,6 +41,6 @@ do_source() {
 
 # various configs
 for i in setup.d/*; do
-    do_source "$i"
+	SETUP_DIR=$(pwd) do_source "$i"
 done
 
