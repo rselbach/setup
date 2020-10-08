@@ -1,0 +1,2 @@
+ln -snf ${SETUP_DIR}/configs/tmux.conf $HOME/.tmux.conf
+ln -snf ${SETUP_DIR}/configs/tmux.conf.local $HOME/.tmux.conf.local
