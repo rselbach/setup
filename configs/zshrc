@@ -188,6 +188,9 @@ export NVM_DIR="$HOME/.nvm"
 # try to attach tmux if a session exists, otherwise create a new one
 alias tx='tmux attach || tmux new'
 
-alias vim='nvim'
+alias vim='true'
 alias v='nvim'
 export EDITOR=nvim
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
