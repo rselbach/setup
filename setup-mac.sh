@@ -20,13 +20,12 @@ ln -snf ctags $HOME/.ctags
 #
 brew install wget
 brew install minikube
-brew cask install 1password
-brew cask install google-chrome
-brew cask install spotify
-brew cask install iterm2
-brew cask install slack
-brew cask install vmware-fusion
-brew cask install docker
+brew install --cask 1password
+brew install --cask google-chrome
+brew install --cask iterm2
+brew install --cask slack
+brew install --cask vmware-fusion
+brew install --cask docker
 brew install jump
 brew install direnv
 
