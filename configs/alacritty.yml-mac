@@ -51,17 +51,17 @@ scrolling:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Firacode
+    family: Fira Code
     style: Regular
 
   # The bold font face
   bold:
-    family: Firacode
+    family: Fira Code
     style: Bold
 
   # The italic font face
   italic:
-    family: Firacode
+    family: Fira Code
     style: Regular Italic
 
   # Point size of the font

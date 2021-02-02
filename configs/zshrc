@@ -127,8 +127,8 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history
 
 
 
-export PATH=$HOME/devel/go/bin:$HOME/go/bin:/usr/local/go/bin:$PATH
-DEFAULT_USER="robteix"
+export PATH=$HOME/bin:$HOME/devel/go/bin:$HOME/go/bin:/usr/local/go/bin:$PATH
+DEFAULT_USER="rselbach"
 
 
 golang_version() {
@@ -188,7 +188,7 @@ export NVM_DIR="$HOME/.nvm"
 # try to attach tmux if a session exists, otherwise create a new one
 alias tx='tmux attach || tmux new'
 
-alias vim='true'
+alias vim='nvim'
 alias v='nvim'
 export EDITOR=nvim
 if command -v pyenv 1>/dev/null 2>&1; then
