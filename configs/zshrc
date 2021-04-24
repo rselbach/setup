@@ -177,6 +177,10 @@ export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/gcloud/application_default_c
 
 eval "$(jump shell zsh)"
 
+# cd to git clone root
+alias cdr='cd $(git rev-parse --show-toplevel)'
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
@@ -193,3 +197,5 @@ export EDITOR=nvim
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+printf "\e[?1042l"
