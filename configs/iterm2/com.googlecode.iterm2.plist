@@ -4,8 +4,12 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>ClosingTmuxWindowKillsTmuxWindows</key>
+	<true/>
+	<key>ClosingTmuxWindowKillsTmuxWindows_selection</key>
+	<integer>1</integer>
 	<key>Default Bookmark Guid</key>
-	<string>957634BB-EDFA-4D1A-BFB5-9E923E18831A</string>
+	<string>C359F330-E5AB-433D-8611-A2D275479166</string>
 	<key>EnableAPIServer</key>
 	<true/>
 	<key>GlobalKeyMap</key>
@@ -1003,33 +1007,6 @@
 					<key>Text</key>
 					<string>0x7f</string>
 				</dict>
-				<key>0x44-0x120000-0x2</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Label</key>
-					<string></string>
-					<key>Text</key>
-					<string>0x01 0x25</string>
-				</dict>
-				<key>0x64-0x100000-0x2</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Label</key>
-					<string></string>
-					<key>Text</key>
-					<string>0x01 0x22</string>
-				</dict>
-				<key>0x74-0x100000-0x11</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Label</key>
-					<string></string>
-					<key>Text</key>
-					<string>0x01 0x43</string>
-				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
 					<key>Action</key>
@@ -1057,15 +1034,6 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x1b 0x1b 0x5b 0x41</string>
-				</dict>
-				<key>0xf700-0x300000-0x7e</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Label</key>
-					<string></string>
-					<key>Text</key>
-					<string>0x01 0x6b</string>
 				</dict>
 				<key>0xf700-0x320000-0x7e</key>
 				<dict>
@@ -1104,15 +1072,6 @@
 					<key>Text</key>
 					<string>0x1b 0x1b 0x5b 0x42</string>
 				</dict>
-				<key>0xf701-0x300000-0x7d</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Label</key>
-					<string></string>
-					<key>Text</key>
-					<string>0x01 0x6a</string>
-				</dict>
 				<key>0xf701-0x320000-0x7d</key>
 				<dict>
 					<key>Action</key>
@@ -1149,15 +1108,6 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x1b 0x1b 0x5b 0x44</string>
-				</dict>
-				<key>0xf702-0x300000-0x7b</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Label</key>
-					<string></string>
-					<key>Text</key>
-					<string>0x01 0x08</string>
 				</dict>
 				<key>0xf702-0x320000-0x7b</key>
 				<dict>
@@ -1204,15 +1154,6 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x1b 0x1b 0x5b 0x43</string>
-				</dict>
-				<key>0xf703-0x300000-0x7c</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Label</key>
-					<string></string>
-					<key>Text</key>
-					<string>0x01 0x0c</string>
 				</dict>
 				<key>0xf703-0x320000-0x7c</key>
 				<dict>
@@ -2171,7 +2112,7 @@
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
-			<false/>
+			<true/>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -2204,6 +2145,8 @@
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
 	<false/>
+	<key>OpenTmuxWindowsIn</key>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2239,8 +2182,10 @@
 	</dict>
 	<key>SoundForEsc</key>
 	<false/>
-	<key>SwitchTabModifier</key>
+	<key>SwitchPaneModifier</key>
 	<integer>9</integer>
+	<key>SwitchTabModifier</key>
+	<integer>4</integer>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
