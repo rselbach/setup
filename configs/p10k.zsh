@@ -39,6 +39,7 @@ fi
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
       # =========================[ Line #1 ]=========================
       # os_icon               # os identifier
+      context
       command_execution_time  # duration of the last command
       kubecontext
       vcs                     # git status
