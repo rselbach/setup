@@ -35,6 +35,9 @@ window:
   # Setting this to false will result in window without borders and title bar.
   decorations: full
 
+  # Background opacity
+  opacity: 1.0
+
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
 
@@ -161,9 +164,6 @@ bell:
   animation: EaseOutExpo
   duration: 0
 
-# Background opacity
-background_opacity: 1.0
-
 # Mouse bindings
 #
 # Currently doesn't support modifiers. Both the `mouse` and `action` fields must
@@ -194,6 +194,7 @@ mouse:
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: true
 
+hints:
   url:
     # URL launcher
     #
@@ -234,7 +235,7 @@ live_config_reload: true
 # Entries in shell.args are passed unmodified as arguments to the shell.
 #
 shell:
-  program: /usr/local/bin/zsh
+  program: /opt/homebrew/bin/zsh
   args:
     - -l
 
