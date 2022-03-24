@@ -162,7 +162,7 @@ else
     xPROMPT='${ret_status}$(local_prompt)$(kube_ps1)%{$fg[cyan]%}[%c]%{$reset_color%} $(git_prompt_info)'
 fi
 
-export PATH=$PATH:"/Applications/VMware Fusion.app/Contents/Library"
+export PATH=/opt/homebrew/bin:$PATH:"/Applications/VMware Fusion.app/Contents/Library"
 
 setopt no_share_history
 
