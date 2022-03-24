@@ -171,12 +171,11 @@ export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/gcloud/application_default_c
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-# setup jump
-eval "$(jump shell zsh)"
 
 # machine-specific configs
 [ -f "${HOME}/.zsh.local" ] && source "${HOME}/.zsh.local"
 
+eval "$(jump shell zsh)"
 
 # cd to git clone root
 alias cdr='cd $(git rev-parse --show-toplevel)'
