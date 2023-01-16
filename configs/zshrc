@@ -58,6 +58,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+ZSH_TMUX_AUTOSTART="false"
+ZSH_TMUX_ITERM2="true"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -65,6 +68,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
   colorize
   ssh-agent
+  tmux
 #  zsh-syntax-highlighting
 #  zsh-autosuggestions
 )
@@ -199,3 +203,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 printf "\e[?1042l"
+
+#. /usr/local/opt/asdf/libexec/asdf.sh
