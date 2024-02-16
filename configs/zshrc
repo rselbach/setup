@@ -67,7 +67,6 @@ ZSH_TMUX_ITERM2="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   colorize
-  ssh-agent
   tmux
 #  zsh-syntax-highlighting
 #  zsh-autosuggestions
@@ -205,3 +204,5 @@ fi
 printf "\e[?1042l"
 
 #. /usr/local/opt/asdf/libexec/asdf.sh
+
+. /usr/local/opt/asdf/libexec/asdf.sh

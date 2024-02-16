@@ -1,0 +1,5 @@
+theme = "default"
+# dark_plus
+
+[editor]
+true-color = true
