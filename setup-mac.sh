@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # install brew if not already there
-if [[ ! -f "/usr/local/bin/brew" ]]; then
+if [[ ! -f "/opt/homebrew/bin/brew" ]]; then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -20,11 +20,11 @@ ln -snf ctags $HOME/.ctags
 #
 brew install wget
 brew install minikube
-brew install --cask 1password
-brew install --cask google-chrome
+#brew install --cask 1password
+#brew install --cask google-chrome
 brew install --cask iterm2
-brew install --cask slack
-brew install --cask vmware-fusion
+#brew install --cask slack
+#brew install --cask vmware-fusion
 brew install --cask docker
 brew install jump
 brew install direnv

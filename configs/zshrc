@@ -194,15 +194,24 @@ export NVM_DIR="$HOME/.nvm"
 # try to attach tmux if a session exists, otherwise create a new one
 alias tx='tmux attach || tmux new'
 
-alias vim='nvim'
-alias v='nvim'
-export EDITOR=nvim
+#alias vim='nvim'
+#alias v='nvim'
+export EDITOR=vim
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
 printf "\e[?1042l"
 
-#. /usr/local/opt/asdf/libexec/asdf.sh
+eval "$(ssh-agent -s)"
 
-. /usr/local/opt/asdf/libexec/asdf.sh
+coverhtml() {
+  go test -coverprofile=/tmp/c.out "$@" || return -1
+  go tool cover -html=/tmp/c.out -o /tmp/coverage.html || return -2
+  open /tmp/coverage.html
+}
+
+alias rebase="git fetch -va && git rebase origin/main"
+alias rb="git fetch -va && git rebase origin/main"
+
+export PATH="${HOME}/bin:${PATH}"
