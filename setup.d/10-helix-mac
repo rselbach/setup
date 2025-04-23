@@ -1,5 +1,0 @@
-brew install helix
-
-mkdir -p $HOME/.config/helix
-ln -snf ${SETUP_DIR}/configs/helix-config.toml $HOME/.config/helix/config.toml
-ln -snf ${SETUP_DIR}/configs/helix-languages.toml $HOME/.config/helix/languages.toml
